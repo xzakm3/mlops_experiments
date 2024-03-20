@@ -1,0 +1,32 @@
+schema: '2.0'
+stages:
+  data_split:
+    cmd: python src/data_split.py
+    deps:
+    - path: data/pool_data
+      hash: md5
+      md5: 14d187e749ee5614e105741c719fa185.dir
+      size: 18999874
+      nfiles: 183
+    - path: src/data_split.py
+      hash: md5
+      md5: 280fa1684c5496fb9f76ff8c96bd2561
+      size: 1035
+    params:
+      params.yaml:
+        base:
+          random_seed: 42
+        data_split:
+          test_regions:
+          - REGION_1
+    outs:
+    - path: data/test_data
+      hash: md5
+      md5: 1bb16eb1219b47a8bf711ade27c476e4.dir
+      size: 2087761
+      nfiles: 24
+    - path: data/train_data
+      hash: md5
+      md5: a28a7e4d342c27c1d7ad3c17ec1dfa7a.dir
+      size: 16905965
+      nfiles: 158
