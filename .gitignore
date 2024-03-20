@@ -3,3 +3,9 @@
 .dvc/config.local
 .dvc/tmp
 .dvc/cache
+
+data/
+/model.tar.gz
+/data
+/models
+/results
