@@ -4,8 +4,7 @@
 .dvc/tmp
 .dvc/cache
 
-data/
+data/*
 /model.tar.gz
-/data
 /models
 /results
